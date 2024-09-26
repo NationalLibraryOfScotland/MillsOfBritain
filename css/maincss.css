@@ -76,6 +76,8 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 
 	.imgcap {font-size: 0.95em;margin-top: 5px;}
 
+	.notes {font-size: 0.95em;margin-top: 5px;}
+
 @media only screen and (min-width: 60em) {
 	#show {
 		visibility: visible;
