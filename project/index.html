@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd)">
+<!--[if gt IE 1]><html xmlns="http://www.w3.org/1999/xhtml" class="ie)"><![endif]--><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="en" />
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<title>Mills of Britain website - National Library of Scotland / University of Glasgow</title>
+		<!-- slider css -->
+        <link type="text/css" rel="stylesheet" href="css/viewer-bootstrap-slider.css" type="text/css">
+
+		<!-- specific css to this page -->
+		<link type="text/css" rel="stylesheet" href="css/maincss.css?v=20240704" media="screen" /> 
+
+
+
+	<style>
+	    /* generic table styling */
+	    table a { text-decoration: none; }
+	    table a:hover { text-decoration: underline; }
+	/*    tr :last-child { text-align: right; } */
+	
+	    /* hide content from view but not from searching */
+	    .hidden { display: none; }
+	
+	    /* filter table specific styling */
+	    //.filter-table { margin-left: 1em; font-size: 0.8em; text-decoration: none; position:absolute; top:-15px; left:10px;}
+	    .filter-table .quick:hover { text-decoration: underline; }
+	
+	    td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+
+		#dateIDslider.slider .tooltip.top {  margin-top: 8px !important;  top: -40px !important;}
+		
+		#mapsslider.slider .tooltip.top {  margin-top: 8px !important;  top: -40px !important;}
+         
+        </style>
+
+
+
+
+</head>
+
+	<body>
+
+		<div id="header" role="banner">
+
+		<div id="home"><a href="https://maps.nls.uk/">Maps home</a>   </div>
+
+			<div id="headertitle">
+
+
+
+			<h1>Mills of Britain</h1> 
+
+			<h5></h5>
+	
+			</div>
+
+			<div id="headerlinks">
+	
+				<p><strong>Map</strong>  &nbsp; &nbsp;   <a href="background/">Background</a>   &nbsp; &nbsp;  <a href="project/">Project</a> &nbsp; &nbsp; <a href="explore/">Explore More</a>  &nbsp; &nbsp; </p>
+	
+			</div>
+
+
+
+		</div>
+
+			<div id="logo">
+				
+
+				
+				<a href="https://www.leverhulme.ac.uk/"><img id="leverhulme" src="img/Leverhulme_Trust_RGB_blue_0_0.png" alt="Leverhulme Trust" /></a>
+				
+				<a href="https://www.uow.edu.au/"><img id="wol" src="img/wollongong.jpg" alt="University of Wollongong" /></a>
+				
+				<a href="https://www.nls.uk/"><img id="nls" src="img/nls-logo.jpg" alt="National Library of Scotland" /></a>
+				
+				<a href="https://www.gla.ac.uk/"><img id="gla" src="img/marque.svg" alt="University of Glasgow" /></a>
+				
+			</div>
+
+		 <div id="map" class="map">
+
+			<!-- <div id="scalebar"></div> -->
+			<div id="loading_results"></div>
+
+			<div id="showCoordinatesinfo" class="hidden"></div>
+		</div>
+
+			<div id="zoom_statement"></div>
+		
+		<div id="resultsSideBar">
+ 			<div id="resultsheader"></div>
+			<div id="results"></div>
+		</div>
+
+<div id="explorelinks"><button type="button" id="hidelinks" class="close" >
+                  <span >&times;</span>
+                </button>
+		Links from this map view to:<ul><li><a href="javascript:gotoexplore()">Georeferenced Maps</a> or <a href="javascript:gotosidebyside()">Side-by-side</a> viewers</li>
+		</ul>
+		Links from the centre of the screen to:
+		<ul>
+		<li><a href="javascript:get25inch()">25 inch sheets covering this place</a></li>
+			<li><a href="javascript:get6inch()">6 inch sheets covering this place</a></li></ul>
+	
+</div>
+
+
+<div id="showmaplocationinfo"></div>
+
+
+
+	    <div id="sidebar">
+
+                <button type="button" id="hide" class="close" >
+                  <span >&times;</span>
+                </button>
+			<h3>Filter mills</h3>
+			
+		     <table><tr><td style="white-space: nowrap;">Filter by <strong>Date of Survey</strong>:</td><td>
+
+		        <!-- <div id = "daterange"></div> -->
+
+        		<input id="dateslider" data-slider-id='dateIDslider' type="text" data-slider-min="1720" data-slider-max="1850" data-slider-value="[0,0]" title="Filter the mills by date range"/>
+				
+				</td</tr></table>
+
+		    <table><tr><td>Filter by <strong>Mill Type by map Symbol</strong>:</td><td>
+
+		    <form><select id="millsymbolselect" onchange="javascript:changesymboltype(this.selectedIndex);"></select></form></td</tr></table>
+
+
+		    <table><tr><td>Filter by <strong>Mill Type by map text</strong>:</td><td>
+
+		    <form><select id="milltypeselect" onchange="javascript:changemilltype(this.selectedIndex);"></select></form></td</tr></table>
+
+							<table><tr><td style="white-space: nowrap;"><label for="watermillsdiv">Exclude mills farther than <input id="onlyshow425" type="checkbox"/> 425 metres of river? <br/>
+							<input id="onlyshow275" type="checkbox"/> 275 metres of river? </label> </td></tr></table>
+
+			<br/>
+
+
+
+
+
+
+
+
+<!--		        <hr2></hr2>
+
+	                       <table><tr><td style="white-space: nowrap;"><label for="watermillsdiv">Only show water mills?<input id="onlyshowwatermills" type="checkbox"/></label> </td><td>
+	
+
+	                        <label for="notincanmorediv">Only show mills not in NMRS?<input id="notincanmoremills" type="checkbox"/></label>
+	                       </td</tr></table> -->
+
+				
+
+
+
+		        <hr2></hr2>
+
+			<h3>Change map</h3>
+			
+				<h4 id="transparencyboxes"><div id="circle-building" class="circle"></div>Peat-, moor- and fenland - change transparency:</h4>
+
+	        		<input id="mapslider" data-slider-id='mapsslider' type="text" data-slider-min="10" data-slider-max="100" data-slider-step="1" data-slider-value="100" title="Change transparency of boxes" />
+	
+				<br/>
+			<h3>Background map layer</h3>
+							<form><select id="layerSelect" onchange="changemap(this.selectedIndex,16)"></select></form>
+							
+
+
+		        <hr2></hr2>
+
+		        <div id = "filteredFeaturesTotal"></div>
+		        <div id = "filteredFeaturesInMap"></div>
+
+		   
+	     </div>
+
+                <button id="show">Show Filter Panel</button>
+
+                <button id="showlinks">Show Links</button>
+
+
+
+
+		<!-- JQuery Javascript -->
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- Bootstrap slider Javascript -->
+
+  	        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.js"></script>
+
+          <script type="text/javascript" src="/geo/scripts/bootstrap-slider-ol6.js" type="text/javascript"></script>
+		
+		<!-- proj4 Javascript for projection information -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js"></script>
+
+
+		<!-- OpenLayers Javascript - use ol-debug.js for debugging and ol.js for releasing when finished    -->
+
+			<script type="text/javascript" src="scripts/ol_6_15_1.js"></script>
+	        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.js"></script> -->
+
+	        <!-- <script type="text/javascript" src="scripts/ol-debug.js"></script> -->
+
+		<!-- Our specific Javascript for this map -->
+
+		<script type="text/javascript" src="scripts/index.js?v=20240704"></script> 
+
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $("#mills-table tr").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});
+
+	$(document).ready(function() {
+	
+		    $("#showCoordinatesinfo").removeClass("hidden");
+
+			
+     });
+
+		jQuery("#show").hide();
+		jQuery("#showlinks").hide();
+		jQuery("#showmaplocationinfo").hide();
+     
+         	jQuery("#hide").click(function(){
+             		jQuery("#sidebar").hide();
+			jQuery("#show").show();
+         	});
+
+         	jQuery("#hidelinks").click(function(){
+             		jQuery("#explorelinks").hide();
+			jQuery("#showlinks").show();
+         	});
+
+	         jQuery("#showlinks").click(function(){
+	             jQuery("#explorelinks").show();
+	             jQuery("#showlinks").hide();
+	         });
+
+	         jQuery("#show").click(function(){
+	             jQuery("#sidebar").show();
+	             jQuery("#show").hide();
+	         });
+
+		</script>
+
+
+
+	</body>
+</html>
