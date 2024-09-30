@@ -23,14 +23,14 @@ label { font-size: 0.9em;}
 	h5 {	display: none; }
 }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 80em) {
 #header { position: absolute; top: 10px; left: 10px; right: 10px; height: 95px;  overflow: hidden;  background: #fff; background-image: url('../img/banner2.jpg'); 
 background-repeat:no-repeat; background-position:left bottom; border: 1px solid #592F57; box-shadow: 0 0px 0px #CCC; border-radius: 4px; }
 
 }
 
-@media only screen and (max-width: 50em) {
-#header { position: absolute; top: 0px; left: 0px; right: 0px; height: 95px; width: 100%; overflow: hidden;  background: #fff; background-image: url('../img/banner2.jpg'); 
+@media only screen and (max-width: 80em) {
+#header { position: absolute; top: 0px; left: 0px; right: 0px; height: 95px; width: 100%; overflow: hidden;  background: #fff; background-image: url('../img/banner2-mobile.jpg'); 
 background-repeat:no-repeat; background-position:left bottom; border: 1px solid #592F57; box-shadow: 0 0px 0px #CCC; border-radius: 4px; }
 
 }
@@ -38,7 +38,7 @@ background-repeat:no-repeat; background-position:left bottom; border: 1px solid 
 #home { position: absolute; top: 5px; left: 5px; z-index: 5;} 
 
 @media only screen and (min-width: 50em) {
-	#headertitle { position: absolute; top: 16px; left: 50px; right:480px; overflow: hidden; text-align:center;  font-size: 1.2em; line-height:1.2em;} 
+	#headertitle { position: absolute; top: 16px; left: 50px; right:300px; overflow: hidden; text-align:center;  font-size: 1.2em; line-height:1.2em;} 
 }
 
 @media only screen and (max-width: 50em) {
