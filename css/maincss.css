@@ -24,13 +24,13 @@ label { font-size: 0.9em;}
 }
 
 @media only screen and (min-width: 50em) {
-#header { position: absolute; top: 10px; left: 10px; right: 10px; height: 95px;  overflow: hidden;  background: #fff; background-image: url('../img/banner.jpg'); 
+#header { position: absolute; top: 10px; left: 10px; right: 10px; height: 95px;  overflow: hidden;  background: #fff; background-image: url('../img/banner2.jpg'); 
 background-repeat:no-repeat; background-position:left bottom; border: 1px solid #592F57; box-shadow: 0 0px 0px #CCC; border-radius: 4px; }
 
 }
 
 @media only screen and (max-width: 50em) {
-#header { position: absolute; top: 0px; left: 0px; right: 0px; height: 95px; width: 100%; overflow: hidden;  background: #fff; background-image: url('../img/mills-header.jpg'); 
+#header { position: absolute; top: 0px; left: 0px; right: 0px; height: 95px; width: 100%; overflow: hidden;  background: #fff; background-image: url('../img/banner2.jpg'); 
 background-repeat:no-repeat; background-position:left bottom; border: 1px solid #592F57; box-shadow: 0 0px 0px #CCC; border-radius: 4px; }
 
 }
