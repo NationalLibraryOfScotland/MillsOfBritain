@@ -1,19 +1,24 @@
 /* CSS full-screen layout - site specific elements */
 
 html { overflow: hidden; }
-body { overflow: hidden; padding: 0; margin: 0; width: 100%;  font-family: Trebuchet MS, Trebuchet, Arial, sans-serif; background: #FFFFFF;}
+body { overflow: hidden; padding: 0; margin: 0; width: 100%;  font-family: Roboto, Helvetica, Arial, sans-serif; background: #FFFFFF; color:#414141}
 @media only screen and (min-width: 60em) {
-h1 { padding-left:2px; margin-top:15px; font-size: 1.2em; line-height:1.2em; }
+h1 { padding-left:2px; margin-top:15px; font-size: 1.8em; line-height:1.5em; color:rgba(86,40,45,1.00);letter-spacing: 8px;font-weight: 1000; text-shadow: 2px 2px 8px gray;}
 }
 @media only screen and (max-width: 60em) {
-h1 { padding:3px 8px; margin:0; font-size: 1.3em; line-height:1.3em; }
+h1 { padding:3px 8px; margin:0; font-size: 1.8em; line-height:1.5em;color:rgba(86,40,45,1.00);letter-spacing: 8px;font-weight: 1000; text-shadow: 2px 2px 8px gray;}
 }
-h2 {  margin-top:15px; font-size: 1.1em; }
-h3 {	font-size: 1.0em; border-bottom: 1px solid #ccc;}
-h4 {	font-size: 0.95em; font-style: italic;}
+h2 {  margin-top:15px; font-size: 1.5em; line-height:1.5em;color:rgba(132,112,28,1.00);letter-spacing: 1.5px; font-weight: 600;}
+h3 {	font-size: 1.2em; border-bottom: 1px solid #ccc;color:rgba(81,72,65,1.00); letter-spacing: 1.5px; font-weight: 400;}
+h4 {	font-size: 1em; font-style: italic;}
 h5 {	padding:7px 10px; margin:0; font-size: 1.0em;}
-label { font-size: 0.9em;}
-
+label { font-size: 0.8em;} 
+p {line-height: 1.5em;   /* within paragraph */
+  margin-bottom: 15px; /* between paragraphs */
+}
+hr {height: 2px; background-color:rgba(189,180,163,1.00); width: 300px;margin-top: 15px; margin-bottom: 15px;border:none;
+}
+a {color:rgba(73,129,108,1.00);}
 
 @media only screen and (min-width: 60em) {
 	h5 {	padding:7px 10px; margin:0; font-size: 1.0em;}
@@ -46,11 +51,11 @@ background-repeat:no-repeat; background-position:left bottom; border: 1px solid 
 }
 
 @media only screen and (min-width: 60em) {
-	#headerlinks { position: absolute; top: 42px; width: 800px; right: 5px; font-size: 1.0em;  line-height: 110%; padding: 10px 5px; 0px 10px; text-align: right; z-index:10; }
+	#headerlinks { position: absolute; top: 42px; width: 800px; right: 5px; font-size: 1.0em; color:rgba(158,112,28,1.00); line-height: 110%; padding: 10px 5px; 0px 10px; text-align: right; z-index:10; }
 }
 
 @media only screen and (max-width: 60em) {
-	#headerlinks { position: absolute; top: 52px; right: 5px; font-size: 0.9em;  line-height: 100%; padding: 2px 5px; 0px 5px; text-align: right; }
+	#headerlinks { position: absolute; top: 52px; right: 5px; font-size: 0.9em; color:rgba(158,112,28,1.00); line-height: 100%; padding: 2px 5px; 0px 5px; text-align: right; }
 }
 
 #main { position: absolute; top: 125px; left: 10px; right: 10px; bottom: 10px; overflow: auto; border: 1px solid #592F57; border-radius: 2px; box-shadow: 0 0px 0px #CCC; 
@@ -74,9 +79,9 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
     opacity: .6;
 }
 
-	.imgcap {font-size: 0.95em;margin-top: 5px;}
+	.imgcap {text-align:justify; font-size: 0.85em;margin-top: 15px;margin-left: 35px;margin-right: 35px;margin-bottom: 15px;}
 	
-	.notes {font-size: 0.95em;margin-top: 5px;}
+	.notes {font-size: 0.90em;margin-top: 15px;}
 
 @media only screen and (min-width: 60em) {
 	#show {
@@ -87,7 +92,7 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 		z-index: 1000;
 		font-size: 0.8em;
 		text-decoration: underline;
-		color: blue;
+		color:;
 		background-color: white;
 		padding: 5px 5px 5px 5px;
 		border-radius: 6px;
@@ -165,9 +170,9 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 .figcaption {
   display: block;
   width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.9em;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 0.85em;
 }
 
 .caption200 {
@@ -204,11 +209,15 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
     padding: 4px 10px 4px 15px;
     display:table-cell;
     min-width: 160px;
-    text-align: left;
+    text-align: center;
+	color:rgba(101,84,44,1.00);
     line-height: 1.5em;
-    font-size: 100%;
+    font-size: 95%;
+	font-weight: 750; 
     border-bottom: 1px solid white;
-    border-left: 1px solid white;
+    border-left: 2px solid white;
+	letter-spacing: 0.5px;
+	background-color:rgba(232,224,205,1.00);
 
 }
 
@@ -321,7 +330,7 @@ overflow-wrap: break-word;
 
 
 @media only screen and (min-width: 60em) {
-	#logo { position: absolute; right: 12px; top: 12px; width: 480px; height: 45px;  z-index: 100001; background-color: white; border-radius: 2px; z-index: 5; }
+	#logo { position:absolute; right: 12px; top: 12px; width: 480px; height: 45px;  z-index: 100001; background-color: white; border-radius: 2px; z-index: 5; }
 }
 
 
@@ -896,4 +905,3 @@ th, td {
 			border-radius: 50%;
 			left: 50%;
 		}
-
