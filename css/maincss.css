@@ -81,7 +81,7 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 
 	.imgcap {text-align:justify; font-size: 0.85em;margin-top: 15px;margin-left: 35px;margin-right: 35px;margin-bottom: 15px;}
 	
-	.notes {font-size: 0.90em;margin-top: 15px;}
+	.notes {font-size: 0.8em;margin-top: 10px;}
 
 @media only screen and (min-width: 60em) {
 	#show {
