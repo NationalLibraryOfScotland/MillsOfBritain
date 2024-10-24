@@ -144,7 +144,7 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 
 		
 @media only screen and (min-width: 50rem) {
-	#dateIDslider {width: 120px; margin-left: 5px; margin-right: 5px; }
+	#dateIDslider {width: 120px; margin-left: 5px; margin-right: 20px; }
 }
 		
 @media only screen and (max-width: 50rem) {
@@ -204,21 +204,26 @@ padding: 10px 10px 10px 10px; background: #fff; z-index: 10001;}
 
 }
 
+
+
 .cell {
     margin: 0;
     padding: 4px 10px 4px 15px;
-    display:table-cell;
+    display:inline-block;
     min-width: 160px;
     text-align: center;
-	color:rgba(101,84,44,1.00);
+	color:rgba(80,70,30,1.00);
     line-height: 1.5em;
     font-size: 95%;
 	font-weight: 750; 
     border-bottom: 1px solid white;
     border-left: 2px solid white;
 	letter-spacing: 0.5px;
-	background-color:rgba(232,224,205,1.00);
+	background-color:rgba(232,224,205,0.3);
+}
 
+.cell a {
+	color:rgba(63,100,100,1.00);
 }
 
 @media only screen and (min-width: 60em) {
@@ -335,7 +340,7 @@ overflow-wrap: break-word;
 
 
 @media only screen and (max-width: 60em)  {
-	#logo { position: absolute; right: 2px; bottom: 0px; max-width: 380px; height: 50px;  z-index: 100001; background-color: white; border-radius: 2px;}
+	#logo { position: absolute; right: 2px; bottom: 0px; max-width: 380px; height: 50px;  z-index: 100001; background-color: white; border-radius: 2px; border: 1px solid #ccc;}
 }
 
 @media only screen and (min-width: 60em) {
@@ -905,3 +910,19 @@ th, td {
 			border-radius: 50%;
 			left: 50%;
 		}
+		
+#URHere {
+    float: right;
+    margin: 15px 0 0 0;
+    padding: 0 10px 0 10px;
+}
+
+#URHere li {
+    display: inline-block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+input, select {
+    border: 2px solid #000;
+}
