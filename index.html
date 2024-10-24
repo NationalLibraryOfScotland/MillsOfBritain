@@ -5,15 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="en" />
 	        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-		<title>Mills of Britain website - National Library of Scotland / University of Glasgow</title>
+		<title>Mills of Britain web resource - National Library of Scotland / University of Glasgow / University of Wollongong</title>
+	<meta name="Description" content="Explore over 15,000 mill sites mapped in 18th and 19th century Britain" />
+	<meta name="Keywords" content="Mills, watermills, windmills, county maps, Roy Military Survey of Scotland" />		
+		
 		<!-- slider css -->
         <link type="text/css" rel="stylesheet" href="css/viewer-bootstrap-slider.css" type="text/css">
 
 		<!-- specific css to this page -->
-		<link type="text/css" rel="stylesheet" href="css/maincss.css?v=20240704" media="screen" /> 
+		<link type="text/css" rel="stylesheet" href="css/maincss.css?v=20240904" media="screen" /> 
 		<!-- OpenLayers css -->
 		<link type="text/css" rel="stylesheet" href="css/ol.css" media="screen" /> 
-
+  		<link rel="stylesheet" href="/assets/css/ol-ext.css" />
 
 
 	<style>
@@ -39,7 +42,7 @@
 
 
 
-
+        <!--#include file="/assets/includes/gtm.stm" -->
 </head>
 
 	<body>
@@ -54,14 +57,12 @@
 
 			<h1>Mills of Britain</h1> 
 
-			<h5></h5>
 	
 			</div>
 
 			<div id="headerlinks">
 	
-				<p><strong>Map</strong>  &nbsp; &nbsp;   <a href="background/">Background</a>   &nbsp; &nbsp;  <a href="project/">Project</a> &nbsp; &nbsp; <a href="explore/">Explore More</a>  &nbsp; &nbsp; </p>
-	
+				 <ul id="URHere" role="main"><li><strong>Map</strong>  &nbsp; &nbsp; </li><li>   <a href="background/">Background</a>   &nbsp; &nbsp; </li><li>  <a href="project/">Project</a> &nbsp; &nbsp; </li><li> <a href="explore/">Explore More</a>  &nbsp; &nbsp; </li></ul>  
 			</div>
 
 
@@ -129,36 +130,18 @@
 				
 				</td</tr></table>
 
-		    <table><tr><td>Filter by <strong>Mill Type by map symbol</strong>:</td><td>
+		    <table><tr><td>Filter by <strong>Mill Type by map Symbol</strong>:</td><td>
 
-		    <form><select id="millsymbolselect" onchange="javascript:changesymboltype(this.selectedIndex);"></select></form></td</tr></table>
+		    <select id="millsymbolselect" onchange="javascript:changesymboltype(this.selectedIndex);"></select></td</tr></table>
 
 
 		    <table><tr><td>Filter by <strong>Mill Type by map text</strong>:</td><td>
 
 		    <form><select id="milltypeselect" onchange="javascript:changemilltype(this.selectedIndex);"></select></form></td</tr></table>
 
-							<table><tr><td style="white-space: nowrap;"><label for="watermillsdiv">Exclude mills farther than <input id="onlyshow425" type="checkbox"/> 425 metres of river? <br/>
-							<input id="onlyshow275" type="checkbox"/> 275 metres of river? </label> </td></tr></table>
-
-			<br/>
-
-
-
-
-
-
-
-
-<!--		        <hr2></hr2>
-
-	                       <table><tr><td style="white-space: nowrap;"><label for="watermillsdiv">Only show water mills?<input id="onlyshowwatermills" type="checkbox"/></label> </td><td>
-	
-
-	                        <label for="notincanmorediv">Only show mills not in NMRS?<input id="notincanmoremills" type="checkbox"/></label>
-	                       </td</tr></table> -->
-
-				
+							<label for="onlyshow425" style="background-color: #eee;padding: 3px;margin:6px 0 6px 0;display:block">  Exclude mills farther than:<br/> 
+							<input id="onlyshow425" type="checkbox"/> 425 metres of river? <br/>
+							<input id="onlyshow275" type="checkbox"/> 275 metres of river? </label> 
 
 
 
@@ -166,13 +149,14 @@
 
 			<h3>Change map</h3>
 			
-				<h4 id="transparencyboxes"><div id="circle-building" class="circle"></div>Upland, peat-, moor- and fenland - change transparency:</h4>
+				<div id="circle-building" class="circle"></div>Regions unlikely to host mills<br/>(>300 metres; Peat-, moor- and fenland)<br/>- change transparency:
 
 	        		<input id="mapslider" data-slider-id='mapsslider' type="text" data-slider-min="10" data-slider-max="100" data-slider-step="1" data-slider-value="100" title="Change transparency of boxes" />
 	
 				<br/>
 			<h3>Background map layer</h3>
-							<form><select id="layerSelect" onchange="changemap(this.selectedIndex,16)"></select></form>
+			
+				<form><select id="layerSelect" onchange="changemap(this.selectedIndex,16)"></select></form>
 							
 
 
@@ -208,14 +192,12 @@
 
 		<!-- OpenLayers Javascript - use ol-debug.js for debugging and ol.js for releasing when finished    -->
 
-			<script type="text/javascript" src="/geo/scripts/ol_6_15_1.js"></script>
-	        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.js"></script> -->
+			<script type="text/javascript" src="scripts/ol_6_15_1.js"></script>
 
-	        <!-- <script type="text/javascript" src="scripts/ol-debug.js"></script> -->
 
 		<!-- Our specific Javascript for this map -->
 
-		<script type="text/javascript" src="scripts/index.js?v=20240704"></script> 
+		<script type="text/javascript" src="scripts/index.js?v=20240804"></script> 
 
 		<script type="text/javascript">
 
@@ -261,6 +243,7 @@
 
 		</script>
 
+<!--#include file="/assets/includes/gahelper.stm" -->
 
 	</body>
 </html>
